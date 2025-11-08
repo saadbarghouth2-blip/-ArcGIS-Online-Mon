@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>خطة ArcGIS Online — موقع تفاعلي</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="logo" class="logo">
+      <div class="brand-text">
+        <h1>خطة ArcGIS Online</h1>
+        <p class="muted">موقع تفاعلي يعرض خطة العمل ويتيح معاينة وتحميل الملفات</p>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="#home">الرئيسية</a>
+      <a href="#plan">الخطة</a>
+      <a href="#timeline">الجدول الزمنى</a>
+      <a href="#resources">الموارد</a>
+      <a href="#download">تحميل</a>
+    </nav>
+
+    <button id="menuBtn" class="menu-btn" aria-label="قائمة">☰</button>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h2 class="reveal">خطة شاملة لتطوير ArcGIS Online</h2>
+        <p class="reveal delay">مقسمه أسبوعياً مع مهام عملية، مواد قابلة للتحميل، ومعاينة ملفات PDF مباشرة داخل الصفحة.</p>
+        <div class="hero-actions reveal delay-2">
+          <a class="btn primary" href="#plan">شوف الخطة</a>
+          <a class="btn outline" id="openDownload" href="#download">تحميل الملفات</a>
+        </div>
+      </div>
+      <div class="hero-card reveal delay-3">
+        <div class="card-inner">
+          <h3>نظرة سريعة</h3>
+          <p>هذه الخطة تحتوي على مراحل لتعلم وبناء تطبيقات ArcGIS Online: Web Maps, Dashboards, StoryMaps, Survey123, QuickCapture, Experience Builder, Hub وغيرها.</p>
+          <ul class="quick-list">
+            <li>مهمات عملية لكل أسبوع</li>
+            <li>درجات تقدم وتقييم</li>
+            <li>نماذج ومسارات تعليمية</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan" class="section card-section">
+    <div class="container">
+      <h2 class="section-title">الخطة الأسبوعية</h2>
+      <p class="muted">اضغط على أي بطاقة لفتح معاينة المهمة أو التحميل</p>
+      <div class="grid">
+        <!-- Cards will be injected by JS for flexibility -->
+      </div>
+    </div>
+  </section>
+
+  <section id="timeline" class="section timeline-section">
+    <div class="container">
+      <h2 class="section-title">الجدول الزمنى</h2>
+      <p class="muted">توزيع الأعمال عبر الأسابيع مع نقاط تسليم واضحة</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>أسبوع 1 — Web Maps & Field Operations</h4>
+            <p>إنشاء الخرائط، طبقات، ونماذج جمع البيانات.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>أسبوع 2 — Dashboards & Experience Builder</h4>
+            <p>بناء لوحات معلومات وتطبيقات تفاعلية.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>أسبوع 3 — StoryMaps & QuickCapture</h4>
+            <p>قِصَص تفاعلية وأدوات جمع بيانات سريعة.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h4>أسبوع 4 — Survey123 & ArcGIS Hub</h4>
+            <p>نماذج واستضافة المحتوى على Hub.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="section resources-section">
+    <div class="container">
+      <h2 class="section-title">الموارد والملفات</h2>
+      <div class="resources-grid">
+        <!-- resources list injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section download-section card-section">
+    <div class="container">
+      <h2 class="section-title">تحميل الموقع والملفات</h2>
+      <p class="muted">حمل النسخة الجاهزة لرفعها على ArcGIS Hub أو أي استضافة ثابتة.</p>
+      <div class="download-actions">
+        <a class="btn primary" id="downloadSite" href="ArcGIS_online_Plan_site_v2.zip" download>تحميل الموقع (ZIP)</a>
+        <a class="btn outline" id="downloadAll" href="#resources">عرض الملفات</a>
+      </div>
+
+      <div class="preview-area">
+        <h3>معاينة PDF</h3>
+        <div id="pdfPreview" class="pdf-preview">اختر ملف من قائمة الموارد لمعاينته هنا</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>موقع مُصمَّم ومطوَّر لتجربة عرض خطة ArcGIS Online — عدّل المحتوى والستايل كما تحب قبل الرفع.</p>
+    <p class="muted">إذا عايز إضافات: صفحة لكل أسبوع، نماذج تقييم، أو دمج خريطة تفاعلية أقدر أعملها لك.</p>
+  </div>
+</footer>
+
+<!-- Modal for PDF viewer -->
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" id="modalClose"></div>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button id="modalCloseBtn" class="modal-close" aria-label="إغلاق">✕</button>
+    <iframe id="modalFrame" src="" frameborder="0"></iframe>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
